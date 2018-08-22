@@ -37,28 +37,31 @@
         to the HTML tags above without needing to worry if the page is loaded yet
     -->
     <script>
-        let no;
+        let yes;
 
         changeNo = function(id){
-            if(id === no){
+
+            if(id === yes){
                 //Nothing to do
                 return;
             }
 
-            no = id;
+            yes = id;
 
-            let other;
+            let no;
+
             if(id === "btn0"){
-                other = "btn1"
+                no = "btn1"
             } else {
-                other = "btn0"
+                no = "btn0"
             }
 
-            let divYes = document.getElementById(other);
-            let divNo = document.getElementById(no);
+            let divOldYes = document.getElementById(yes);
+            let divOldNo = document.getElementById(no);
 
-            divYes.innerHTML = "Yes";
-            divNo.innerHTML = "No";
+            divOldYes.innerHTML = "No";
+            divOldNo.innerHTML = "Yes";
+
         };
 
         showResult = function(){
