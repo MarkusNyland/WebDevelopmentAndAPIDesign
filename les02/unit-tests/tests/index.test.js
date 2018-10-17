@@ -9,8 +9,6 @@ test('Invalid character', () => {
     expect(index.validateInput("1 <")).toBe(false);
 });
 
-
-
 test('Single element', () => {
    expect(index.validateInput("1")).toBe(true);
 });
